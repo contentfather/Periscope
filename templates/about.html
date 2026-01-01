@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Agency Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+    /* --- About Page Premium Styles --- */
+    .about-hero {
+        background: linear-gradient(120deg, #F8FAFC 60%, #E5E7EB 100%);
+        padding: 64px 0 48px 0;
+        text-align: center;
+        position: relative;
+    }
+    .about-hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+    .about-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #222;
+        margin-bottom: 18px;
+        letter-spacing: -1px;
+    }
+    .about-hero-body {
+        font-size: 1.25rem;
+        color: #374151;
+        margin-bottom: 32px;
+    }
+    .about-cta-btn {
+        display: inline-block;
+        background: linear-gradient(90deg, #3B82F6 60%, #6366F1 100%);
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 14px 36px;
+        border-radius: 32px;
+        text-decoration: none;
+        box-shadow: 0 2px 12px rgba(59,130,246,0.10);
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .about-cta-btn:hover {
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 6px 24px rgba(59,130,246,0.18);
+    }
+    .about-mission {
+        background: #fff;
+        padding: 56px 0 56px 0;
+    }
+    .about-mission-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: center;
+        padding: 0 16px;
+    }
+    .about-mission-text {
+        flex: 1 1 340px;
+        min-width: 320px;
+    }
+    .about-mission-text h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 18px;
+    }
+    .about-mission-text p {
+        font-size: 1.13rem;
+        color: #374151;
+        margin-bottom: 16px;
+    }
+    .about-mission-graphic {
+        flex: 1 1 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-icon-grid {
+        display: flex;
+        gap: 24px;
+    }
+    .about-icon-card {
+        background: #F3F6FB;
+        border-radius: 18px;
+        box-shadow: 0 2px 10px rgba(59,130,246,0.07);
+        padding: 32px 24px 20px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #222;
+        min-width: 120px;
+    }
+    .about-icon {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: #3B82F6;
+    }
+    .about-who {
+        background: #F1F5F9;
+        padding: 56px 0 56px 0;
+    }
+    .about-who-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+    .about-who h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 18px;
+    }
+    .about-who-inner p {
+        font-size: 1.13rem;
+        color: #374151;
+        margin-bottom: 18px;
+    }
+    .about-bullets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .about-bullets li {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(59,130,246,0.07);
+        padding: 16px 28px;
+        font-size: 1.08rem;
+        font-weight: 500;
+        color: #222;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .about-bullet-icon {
+        font-size: 1.4rem;
+        color: #3B82F6;
+    }
+    .about-team {
+        background: #fff;
+        padding: 56px 0 56px 0;
+    }
+    .about-team h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+    .about-team-cards {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .about-team-card {
+        background: #F8FAFC;
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(59,130,246,0.09);
+        padding: 32px 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 260px;
+        max-width: 320px;
+        flex: 1 1 260px;
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .about-team-card:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(59,130,246,0.16);
+    }
+    .about-team-img {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 18px;
+        border: 3px solid #3B82F6;
+        box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+    }
+    .about-team-name {
+        font-size: 1.18rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .about-team-role {
+        font-size: 1rem;
+        color: #374151;
+        text-align: center;
+    }
+    @media (max-width: 900px) {
+        .about-mission-inner, .about-team-cards {
+            flex-direction: column;
+            gap: 32px;
+        }
+        .about-mission-graphic {
+            margin-top: 24px;
+        }
+    }
+    @media (max-width: 600px) {
+        .about-hero h1 {
+            font-size: 1.5rem;
+        }
+        .about-hero-body, .about-mission-text p, .about-who-inner p, .about-team-role {
+            font-size: 1rem;
+        }
+        .about-team-card {
+            min-width: 90vw;
+            max-width: 98vw;
+        }
+    }
+    </style>
+</head>
+<body class="layout-flex">
+    <nav>
+        <div class="nav-logo">
+            <img src="/static/logo.png" alt="Agency Logo" />
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <style>
+    .nav-logo {
+        display: inline-block;
+        margin-right: 2em;
+        vertical-align: middle;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+    nav ul {
+        display: flex;
+        gap: 2em;
+    }
+    </style>
+    <main class="main-grow">
+        <!-- Hero / Introduction Section -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1>Helping teams build reliable digital products customers trust and love.</h1>
+                <p class="about-hero-body">With over 3 years of experience in Software Quality Assurance and Customer Support, we help startups and growing businesses deliver high-quality products with confidence.</p>
+                <a href="/services" class="about-cta-btn">Our Services</a>
+            </div>
+        </section>
+
+        <!-- Mission / Values Section -->
+        <section class="about-mission">
+            <div class="about-mission-inner">
+                <div class="about-mission-text">
+                    <h2>Our Mission & Values</h2>
+                    <p>At Periscope, we work closely with product and engineering teams to reduce risks, improve stability, and ensure every release meets real customer expectations. From early-stage startups to scaling products, we focus on quality, performance, and strong user experiences.</p>
+                    <p>We believe quality is not an afterthought—it’s a standard. Our focus on high-quality delivery, attention to detail, and customer-first thinking helps teams scale faster while maintaining excellence.</p>
+                </div>
+                <div class="about-mission-graphic">
+                    <div class="about-icon-grid">
+                        <div class="about-icon-card"><span class="about-icon">🛡️</span><span>QA</span></div>
+                        <div class="about-icon-card"><span class="about-icon">🤝</span><span>Customer Support</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are / About Periscope -->
+        <section class="about-who">
+            <div class="about-who-inner">
+                <h2>Who We Are</h2>
+                <p>Periscope is a dedicated agency providing Software Quality Assurance (SQA) and Customer Support services to help startups and growing businesses deliver reliable, high-quality digital products with confidence.<br><br>
+                We partner closely with product and engineering teams to ensure every release meets customer expectations. Our QA experts identify risks early, reduce defects, and improve stability, performance, and user experience. Our customer support services help businesses build trust and maintain strong user relationships.</p>
+                <ul class="about-bullets">
+                    <li><span class="about-bullet-icon">⚡</span> Risk Reduction</li>
+                    <li><span class="about-bullet-icon">🚀</span> Performance</li>
+                    <li><span class="about-bullet-icon">🎯</span> User Experience</li>
+                    <li><span class="about-bullet-icon">🤝</span> Customer Trust</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="about-team">
+            <h2>Meet Our Team</h2>
+            <div class="about-team-cards">
+                <div class="about-team-card">
+                    <div class="about-team-img" style="background-image:url('/static/image/about/p.png');"></div>
+                    <div class="about-team-info">
+                        <div class="about-team-name">Partho Protim</div>
+                        <div class="about-team-role">5+ years in SQA & automation. Architecting unified technology infrastructure that eliminates data silos and drives productivity across the organization.</div>
+                    </div>
+                </div>
+                <div class="about-team-card">
+                    <div class="about-team-img" style="background-image:url('/static/image/about/r.png');"></div>
+                    <div class="about-team-info">
+                        <div class="about-team-name">Ismail Ahmed Rupon</div>
+                        <div class="about-team-role">3+ years in SQA, 7+ years in content creation across multiple industries. Orchestrates strategic alignment across business units to maximize collective impact.</div>
+                    </div>
+                </div>
+                <div class="about-team-card">
+                    <div class="about-team-img" style="background-image:url('/static/image/about/s.png');"></div>
+                    <div class="about-team-info">
+                        <div class="about-team-name">Shwaccha Barua</div>
+                        <div class="about-team-role">2+ years in SQA & automation. Optimizing operational infrastructure to unlock capital for innovation and accelerate revenue growth.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        &copy; 2025 Your Agency Name. All rights reserved;
+    </footer>
+    <style>
+    html, body.layout-flex {
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body.layout-flex {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main-grow {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .site-footer {
+        background: #1976d2;
+        color: #fff;
+        text-align: center;
+        padding: 1.2em 0 1em 0;
+        font-size: 1.05em;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+    </style>
+</body>
+</html>

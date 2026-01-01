@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Agency Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="layout-flex">
+    <div style="display: flex; flex-direction: column; min-height: 100vh;">
+        <nav>
+            <div class="nav-logo">
+                <img src="/static/logo.png" alt="Agency Logo" />
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Main menu and sub-menu code removed. Start fresh below. -->
+        <main style="flex: 1 0 auto;">
+            <section style="max-width: 1200px; margin: 0 auto;">
+                <h1 style="font-size:2.3em; margin-bottom:1.2em;">Our Services</h1>
+                <div class="services-list">
+                    <div class="service-card card-equal">
+                        <h3 style="display:flex;align-items:center;gap:0.5em;font-size:1.4em;font-weight:700;color:#1a237e;">
+                            <span style="font-size:1.3em;">&#128736;</span> Quality Assurance (QA)
+                        </h3>
+                        <div class="qa-section">
+                            <div class="qa-main" onclick="toggleSection('qa1')">
+                                <span><span class="qa-icon">&#128221;</span> Test Management</span> <span class="arrow">&#9660;</span>
+                            </div>
+                            <ul id="qa1" class="qa-dropdown">
+                                <li onclick="showDetail(event, 'Test Strategy & Test Plan')"><span class="qa-subicon">&#128196;</span> Test Strategy & Test Plan</li>
+                                <li onclick="showDetail(event, 'Client Requirement Analysis')"><span class="qa-subicon">&#128270;</span> Client Requirement Analysis</li>
+                                <li onclick="showDetail(event, 'Test Case Design')"><span class="qa-subicon">&#128209;</span> Test Case Design</li>
+                                <li onclick="showDetail(event, 'CI/CD Integration')"><span class="qa-subicon">&#9881;&#65039;</span> CI/CD Integration</li>
+                                <li onclick="showDetail(event, 'Agile Methodology')"><span class="qa-subicon">&#128640;</span> Agile Methodology</li>
+                                <li onclick="showDetail(event, 'Bug Reporting and Monitoring')"><span class="qa-subicon">&#128027;</span> Bug Reporting and Monitoring</li>
+                                <li onclick="showDetail(event, 'Data Seeding')"><span class="qa-subicon">&#128202;</span> Data Seeding</li>
+                                <li onclick="showDetail(event, 'STLC / SDLC')"><span class="qa-subicon">&#128187;</span> STLC / SDLC</li>
+                            </ul>
+                            <div class="qa-main" onclick="toggleSection('qa2')">
+                                <span><span class="qa-icon">&#128187;</span> Manual Testing</span> <span class="arrow">&#9660;</span>
+                            </div>
+                            <ul id="qa2" class="qa-dropdown">
+                                <li onclick="showDetail(event, 'Feature Testing')"><span class="qa-subicon">&#11088;</span> Feature Testing</li>
+                                <li onclick="showDetail(event, 'UI/GUI Testing')"><span class="qa-subicon">&#128421;</span> UI/GUI Testing</li>
+                                <li onclick="showDetail(event, 'Functional Testing')"><span class="qa-subicon">&#128295;</span> Functional Testing</li>
+                                <li onclick="showDetail(event, 'Non-functional Testing')"><span class="qa-subicon">&#9881;&#65039;</span> Non-functional Testing</li>
+                                <li onclick="showDetail(event, 'Regression Testing')"><span class="qa-subicon">&#128260;</span> Regression Testing</li>
+                                <li onclick="showDetail(event, 'Input and Output Validation')"><span class="qa-subicon">&#128190;</span> Input and Output Validation</li>
+                                <li onclick="showDetail(event, 'Security Testing')"><span class="qa-subicon">&#128274;</span> Security Testing</li>
+                                <li onclick="showDetail(event, 'Loop Testing')"><span class="qa-subicon">&#128257;</span> Loop Testing</li>
+                                <li onclick="showDetail(event, 'Data Flow Testing')"><span class="qa-subicon">&#128200;</span> Data Flow Testing</li>
+                                <li onclick="showDetail(event, 'Internal Structure Testing')"><span class="qa-subicon">&#128736;</span> Internal Structure Testing</li>
+                                <li onclick="showDetail(event, 'Performance Testing')"><span class="qa-subicon">&#128170;</span> Performance Testing</li>
+                                <li onclick="showDetail(event, 'Smoke and Sanity Testing')"><span class="qa-subicon">&#128293;</span> Smoke and Sanity Testing</li>
+                                <li onclick="showDetail(event, 'Load Testing')"><span class="qa-subicon">&#128230;</span> Load Testing</li>
+                            </ul>
+                            <div class="qa-main" onclick="toggleSection('qa3')">
+                                <span><span class="qa-icon">&#129302;</span> Automation Testing</span> <span class="arrow">&#9660;</span>
+                            </div>
+                            <ul id="qa3" class="qa-dropdown">
+                                <li onclick="showDetail(event, 'Feature Testing (Automation)')"><span class="qa-subicon">&#11088;</span> Feature Testing</li>
+                                <li onclick="showDetail(event, 'Functional Testing (Automation)')"><span class="qa-subicon">&#128295;</span> Functional Testing</li>
+                                <li onclick="showDetail(event, 'Input and Output Validation (Automation)')"><span class="qa-subicon">&#128190;</span> Input and Output Validation</li>
+                                <li onclick="showDetail(event, 'Data Flow Testing (Automation)')"><span class="qa-subicon">&#128200;</span> Data Flow Testing</li>
+                                <li onclick="showDetail(event, 'Smoke Testing (Automation)')"><span class="qa-subicon">&#128293;</span> Smoke Testing</li>
+                                <li onclick="showDetail(event, 'Data-Driven Testing')"><span class="qa-subicon">&#128202;</span> Data-Driven Testing</li>
+                            </ul>
+                            <div class="qa-main" onclick="toggleSection('qa4')">
+                                <span><span class="qa-icon">&#128187;</span> API Testing</span> <span class="arrow">&#9660;</span>
+                            </div>
+                            <ul id="qa4" class="qa-dropdown">
+                                <li onclick="showDetail(event, 'Functional Testing (API)')"><span class="qa-subicon">&#128295;</span> Functional Testing</li>
+                                <li onclick="showDetail(event, 'Load Testing (API)')"><span class="qa-subicon">&#128230;</span> Load Testing</li>
+                                <li onclick="showDetail(event, 'Security Testing (API)')"><span class="qa-subicon">&#128274;</span> Security Testing</li>
+                                <li onclick="showDetail(event, 'Schema Testing')"><span class="qa-subicon">&#128196;</span> Schema Testing</li>
+                            </ul>
+                            <div class="qa-main" onclick="toggleSection('qa5')">
+                                <span><span class="qa-icon">&#128161;</span> Problem Solving</span> <span class="arrow">&#9660;</span>
+                            </div>
+                            <ul id="qa5" class="qa-dropdown">
+                                <li onclick="showDetail(event, 'Data Analysis')"><span class="qa-subicon">&#128202;</span> Data Analysis</li>
+                                <li onclick="showDetail(event, 'Root Cause Analysis')"><span class="qa-subicon">&#128269;</span> Root Cause Analysis</li>
+                                <li onclick="showDetail(event, 'Continuous Improvement')"><span class="qa-subicon">&#128200;</span> Continuous Improvement</li>
+                                <li onclick="showDetail(event, 'Defect Identification')"><span class="qa-subicon">&#10060;</span> Defect Identification</li>
+                                <li onclick="showDetail(event, 'Risk Management')"><span class="qa-subicon">&#9888;&#65039;</span> Risk Management</li>
+                                <li onclick="showDetail(event, 'Collaboration with the Development Team')"><span class="qa-subicon">&#128101;</span> Collaboration with the Development Team</li>
+                            </ul>
+                            <div id="qa-detail" class="qa-detail-box" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="service-card card-equal">
+                        <h3>Customer Support / Customer Success</h3>
+                        <p>Sample placeholder content for Customer Support / Customer Success. This will be refined later.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            &copy; 2025 Your Agency Name. All rights reserved.
+        </footer>
+    </div>
+    <style>
+    .site-footer {
+        background: #1976d2;
+        color: #fff;
+        text-align: center;
+        padding: 1.2em 0 1em 0;
+        font-size: 1.05em;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+    /* Premium QA Card Styles */
+    .service-card {
+        background: linear-gradient(135deg, #f8fafc 60%, #e3eaf6 100%);
+        border: 1.5px solid #e3eaf6;
+        box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+        border-radius: 22px;
+        padding: 3.2em 2.5em 2.8em 2.5em;
+        margin-bottom: 2.5em;
+        min-width: 410px;
+        min-height: 540px;
+        transition: box-shadow 0.2s, border 0.2s;
+        font-size: 1.22em;
+    }
+    .service-card:hover {
+        box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+        border: 1.5px solid #1976d2;
+    }
+    .qa-icon {
+        font-size: 1.2em;
+        margin-right: 0.5em;
+        vertical-align: middle;
+    }
+    .qa-subicon {
+        font-size: 1em;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        color: #1976d2;
+    }
+    .qa-section {
+        margin-top: 1em;
+    }
+    .qa-main {
+        font-weight: 600;
+        background: #f0f4fa;
+        padding: 0.7em 0.7em;
+        margin-bottom: 0.2em;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.98em;
+        box-shadow: 0 1px 2px rgba(25,118,210,0.03);
+        border: 1px solid #e3eaf6;
+        transition: background 0.2s, border 0.2s;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .qa-main:hover {
+        background: #e3eaf6;
+        border: 1px solid #1976d2;
+    }
+    .qa-dropdown {
+        list-style: none;
+        margin: 0 0 1.2em 0.5em;
+        padding: 0;
+        display: block;
+        background: #f9fbfd;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(25,118,210,0.04);
+        border: 1px solid #e3eaf6;
+    }
+    .qa-dropdown li {
+        padding: 0.5em 0.7em;
+        cursor: pointer;
+        border-bottom: 1px solid #e0e7ef;
+        transition: background 0.2s, color 0.2s;
+        font-size: 0.93em;
+        color: #1a237e;
+        display: flex;
+        align-items: center;
+    }
+    .qa-dropdown li:last-child {
+        border-bottom: none;
+    }
+    .qa-dropdown li:hover {
+        background: #e3eaf6;
+        color: #1976d2;
+    }
+    .qa-detail-box {
+        background: #f5faff;
+        border: 1.5px solid #1976d2;
+        border-radius: 8px;
+        margin: 0.7em 0 0 0;
+        padding: 0.7em 0.8em;
+        font-size: 0.93em;
+        color: #0d133d;
+        box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+        font-weight: 500;
+    }
+    .arrow {
+        margin-left: 0.5em;
+        font-size: 0.9em;
+    }
+    .qa-dropdown {
+        display: none;
+    }
+    </style>
+    <script>
+    function toggleSection(id) {
+        var section = document.getElementById(id);
+        if (section.style.display === 'none' || section.style.display === '') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    }
+
+    // Hide all QA sub-point lists on page load
+    window.addEventListener('DOMContentLoaded', function() {
+        var dropdowns = document.querySelectorAll('.qa-dropdown');
+        dropdowns.forEach(function(ul) {
+            ul.style.display = 'none';
+        });
+    });
+
+    function showDetail(event, subpoint) {
+        event.stopPropagation();
+        var detailBox = document.getElementById('qa-detail');
+        detailBox.style.display = 'block';
+        detailBox.innerHTML = '<b>' + subpoint + '</b><br><br>Sample placeholder detail for ' + subpoint + '. This will be replaced with finalized content.';
+    }
+    </script>
+</body>
+</html>

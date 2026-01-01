@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Agency Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="layout-flex">
+    <nav>
+        <div class="nav-logo">
+            <img src="/static/logo.png" alt="Agency Logo" />
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main-grow">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer class="site-footer">
+        &copy; 2025 Your Agency Name. All rights reserved;
+    </footer>
+    <style>
+    html, body.layout-flex {
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body.layout-flex {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main-grow {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .site-footer {
+        background: #1976d2;
+        color: #fff;
+        text-align: center;
+        padding: 1.2em 0 1em 0;
+        font-size: 1.05em;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+    </style>
+</body>
+</html>
