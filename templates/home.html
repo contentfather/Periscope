@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency Portfolio</title>
+    <title>Periscope - Quality Assurance & Customer Support</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body class="layout-flex">
     <nav>
         <div class="nav-logo">
-            <img src="/static/logo.png" alt="Agency Logo" />
+            <img src="/static/logo.png" alt="Periscope Logo" />
         </div>
         <ul>
             <li><a href="/">Home</a></li>
@@ -36,22 +36,83 @@
     }
     </style>
     <main class="main-grow">
-        <h1>Welcome to Our Agency</h1>
-        <section>
-            <h2>Our Work & Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Project Alpha</h3>
-                    <p>Short description of Project Alpha.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>We deliver quality software through expert QA and customer support.</h1>
+                <p>Helping businesses build reliable products that customers trust.</p>
+            </div>
+        </section>
+
+        <!-- Our Work / Projects -->
+        <section class="projects">
+            <div class="container">
+                <h2>Our Work</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>E-commerce Testing Suite</h3>
+                        <p class="category">Quality Assurance</p>
+                        <p class="description">Developed and executed comprehensive test suites for a leading e-commerce platform, covering functional, performance, and security testing.</p>
+                        <p class="outcome">Reduced bug rates by 50% and improved release confidence.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Mobile App Automation</h3>
+                        <p class="category">Automation Testing</p>
+                        <p class="description">Implemented automated testing frameworks for mobile applications, including UI and API testing.</p>
+                        <p class="outcome">Decreased testing time by 70% and increased test coverage to 95%.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>API Testing for FinTech</h3>
+                        <p class="category">API Testing</p>
+                        <p class="description">Performed thorough API testing for financial technology services, ensuring data integrity and compliance.</p>
+                        <p class="outcome">Achieved 100% API reliability and passed all regulatory audits.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Customer Support System QA</h3>
+                        <p class="category">Customer Support</p>
+                        <p class="description">Tested customer support systems, including chatbots and ticketing systems.</p>
+                        <p class="outcome">Improved response times by 30% and customer satisfaction scores by 25%.</p>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Project Beta</h3>
-                    <p>Short description of Project Beta.</p>
+            </div>
+        </section>
+
+        <!-- Project Breakdown -->
+        <section class="project-breakdown">
+            <div class="container">
+                <h2>Projects by Category</h2>
+                <div class="category-section">
+                    <h3>Quality Assurance</h3>
+                    <ul>
+                        <li>E-commerce Testing Suite</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <h3>Project Gamma</h3>
-                    <p>Short description of Project Gamma.</p>
+                <div class="category-section">
+                    <h3>Automation Testing</h3>
+                    <ul>
+                        <li>Mobile App Automation</li>
+                    </ul>
                 </div>
+                <div class="category-section">
+                    <h3>API Testing</h3>
+                    <ul>
+                        <li>API Testing for FinTech</li>
+                    </ul>
+                </div>
+                <div class="category-section">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li>Customer Support System QA</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <p>Ready to ensure your product's quality?</p>
+                <a href="/contact" class="cta-button">Let's talk</a>
             </div>
         </section>
     </main>
@@ -65,6 +126,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
     }
     body.layout-flex {
         display: flex;
@@ -86,6 +151,139 @@
         letter-spacing: 0.5px;
         flex-shrink: 0;
         margin-top: 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background-color: #f8f9fa;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #222;
+    }
+    .hero p {
+        font-size: 1.25rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .projects {
+        padding: 4rem 0;
+    }
+    .projects h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #222;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .project-card {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .project-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #222;
+    }
+    .project-card .category {
+        font-size: 0.9rem;
+        color: #1976d2;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .project-card .description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    .project-card .outcome {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+    .project-breakdown {
+        padding: 4rem 0;
+        background-color: #f8f9fa;
+    }
+    .project-breakdown h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #222;
+    }
+    .category-section {
+        margin-bottom: 2rem;
+    }
+    .category-section h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #222;
+    }
+    .category-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    .category-section li {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+    .cta {
+        text-align: center;
+        padding: 4rem 0;
+    }
+    .cta p {
+        font-size: 1.25rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+    .cta-button {
+        display: inline-block;
+        background-color: #1976d2;
+        color: #fff;
+        padding: 0.75rem 2rem;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+    .cta-button:hover {
+        background-color: #1565c0;
+    }
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+        .projects h2, .project-breakdown h2 {
+            font-size: 1.75rem;
+        }
     }
     </style>
 </body>
